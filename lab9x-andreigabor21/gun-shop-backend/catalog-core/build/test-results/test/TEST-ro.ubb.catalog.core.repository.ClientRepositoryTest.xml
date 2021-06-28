@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ro.ubb.catalog.core.repository.ClientRepositoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-24T09:35:46" hostname="DESKTOP-FGTU247" time="0.644">
+  <properties/>
+  <testcase name="findByGivenCity" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.242"/>
+  <testcase name="findByGivenName" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.029"/>
+  <testcase name="findAllWithRentalsAndGunTypes" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.073"/>
+  <testcase name="delete" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.105"/>
+  <testcase name="findByIdWithRentalsAndGunTypes" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.042"/>
+  <testcase name="findAll" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.032"/>
+  <testcase name="update" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.048"/>
+  <testcase name="add" classname="ro.ubb.catalog.core.repository.ClientRepositoryTest" time="0.062"/>
+  <system-out><![CDATA[Hibernate: create table Client (id bigint not null, city varchar(255), number integer not null, street varchar(255), dateOfBirth date, name varchar(255), primary key (id))
+Hibernate: create table gun_provider (id bigint not null, name varchar(255), reputation integer not null, speciality varchar(255), primary key (id))
+Hibernate: create table gun_type (id bigint not null, category integer, name varchar(255), gunProvider_id bigint, primary key (id))
+Hibernate: create table rental (price integer, client_id bigint not null, guntype_id bigint not null, primary key (client_id, guntype_id))
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: alter table gun_type add constraint FK207fl5apnyh0gcw5vitfoul1j foreign key (gunProvider_id) references gun_provider
+Hibernate: alter table rental add constraint FK2tj651mvnbwm3hql3r5x8klpe foreign key (client_id) references Client
+Hibernate: alter table rental add constraint FKrapn2gj5sqpdydqs3pldc54q2 foreign key (guntype_id) references gun_type
+findByGivenCity(Criteria) - method entered
+Hibernate: select distinct client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_ where client0_.city=?
+findByGivenName(Criteria) - method entered
+Hibernate: select distinct client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_ where client0_.name=?
+Hibernate: select distinct client0_.id as id1_0_0_, rentals1_.client_id as client_i2_3_1_, rentals1_.guntype_id as guntype_3_3_1_, client0_.city as city2_0_0_, client0_.number as number3_0_0_, client0_.street as street4_0_0_, client0_.dateOfBirth as dateOfBi5_0_0_, client0_.name as name6_0_0_, rentals1_.price as price1_3_1_, rentals1_.client_id as client_i2_3_0__, rentals1_.guntype_id as guntype_3_3_0__ from Client client0_ left outer join rental rentals1_ on client0_.id=rentals1_.client_id
+Hibernate: select client0_.id as id1_0_0_, client0_.city as city2_0_0_, client0_.number as number3_0_0_, client0_.street as street4_0_0_, client0_.dateOfBirth as dateOfBi5_0_0_, client0_.name as name6_0_0_ from Client client0_ where client0_.id=?
+Hibernate: select rentals0_.client_id as client_i2_3_0_, rentals0_.guntype_id as guntype_3_3_0_, rentals0_.client_id as client_i2_3_1_, rentals0_.guntype_id as guntype_3_3_1_, rentals0_.price as price1_3_1_, guntype1_.id as id1_2_2_, guntype1_.category as category2_2_2_, guntype1_.gunProvider_id as gunProvi4_2_2_, guntype1_.name as name3_2_2_ from rental rentals0_ inner join gun_type guntype1_ on rentals0_.guntype_id=guntype1_.id where rentals0_.client_id=?
+Hibernate: delete from Client where id=?
+Hibernate: select client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_
+Hibernate: select distinct client0_.id as id1_0_0_, rentals1_.client_id as client_i2_3_1_, rentals1_.guntype_id as guntype_3_3_1_, client0_.city as city2_0_0_, client0_.number as number3_0_0_, client0_.street as street4_0_0_, client0_.dateOfBirth as dateOfBi5_0_0_, client0_.name as name6_0_0_, rentals1_.price as price1_3_1_, rentals1_.client_id as client_i2_3_0__, rentals1_.guntype_id as guntype_3_3_0__ from Client client0_ left outer join rental rentals1_ on client0_.id=rentals1_.client_id where client0_.id=?
+Hibernate: select client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_
+Hibernate: select client0_.id as id1_0_0_, client0_.city as city2_0_0_, client0_.number as number3_0_0_, client0_.street as street4_0_0_, client0_.dateOfBirth as dateOfBi5_0_0_, client0_.name as name6_0_0_ from Client client0_ where client0_.id=?
+Hibernate: update Client set city=?, number=?, street=?, dateOfBirth=?, name=? where id=?
+Hibernate: select client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into Client (city, number, street, dateOfBirth, name, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: select client0_.id as id1_0_, client0_.city as city2_0_, client0_.number as number3_0_, client0_.street as street4_0_, client0_.dateOfBirth as dateOfBi5_0_, client0_.name as name6_0_ from Client client0_
+[Client(super=BaseEntity{id=1}, name=New, dateOfBirth=2000-09-09, address=Address(city=city, street=street, number=40)), Client(super=BaseEntity{id=10}, name=client1, dateOfBirth=2000-06-06, address=Address(city=city1, street=street1, number=20)), Client(super=BaseEntity{id=20}, name=client2, dateOfBirth=2000-07-07, address=Address(city=city2, street=street2, number=30)), Client(super=BaseEntity{id=30}, name=client3, dateOfBirth=2000-08-08, address=Address(city=city3, street=street3, number=40))]
+]]></system-out>
+  <system-err><![CDATA[ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property 'log4j2.debug' to show Log4j2 internal initialization logging.
+]]></system-err>
+</testsuite>

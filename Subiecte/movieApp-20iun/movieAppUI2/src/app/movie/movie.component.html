@@ -1,0 +1,26 @@
+<label>Year</label>
+<input type="text" [(ngModel)]="movieYear">
+<br>
+<input type="radio" id="before" name="button" [(ngModel)]="lessThan"
+       value="true" (change)="handleChange(true)">
+<label for="before">Before</label><br>
+<input type="radio" id="after" name="button" [(ngModel)]="lessThan"
+       value="false" (change)="handleChange(false)">
+<label for="after">After</label><br>
+
+<h2>Movies</h2>
+<ol>
+  <li *ngFor="let movie of movies">
+    {{movie.title}} -- {{movie.year}}
+    <div *ngIf="movie.actors">
+      <ul>
+        <li *ngFor="let actor of movie.actors">
+          {{actor.name}} -- {{actor.rating}}
+          <button (click)="deleteActor(movie, actor)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ol>
+
+<button (click)="showCast()">Show Cast</button>

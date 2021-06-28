@@ -1,0 +1,27 @@
+<div *ngIf="movie">
+  Title: {{movie.title}} <br>
+  Year: {{movie.year}} <br>
+  Cast:
+  <ol>
+    <li *ngFor="let actor of movie.actors">
+      {{actor.name}} -- {{actor.rating}}
+    </li>
+  </ol>
+</div>
+
+<button (click)="this.isVisible = true">Add more actors</button>
+<br>
+<select *ngIf="this.isVisible" [(ngModel)]="selectedActor">
+  <option disabled selected value>select an option</option>
+  <option *ngFor="let actor of actors" [ngValue]="actor">
+    {{actor.name}}
+  </option>
+</select>
+<button *ngIf="this.isVisible" (click)="addNewActor()">Add</button>
+
+
+<!--option disabled selected value> &#45;&#45; select an option &#45;&#45; </option>-->
+<!--<select [(ngModel)]="selectedActor" (change)="debug()">-->
+<!--  <option disabled selected value> &#45;&#45; select an option &#45;&#45; </option>-->
+<!--  <option *ngFor="let actor of actors" [value]="actor.id">{{actor.name}}</option>-->
+<!--</select>-->

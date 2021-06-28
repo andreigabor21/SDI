@@ -1,0 +1,20 @@
+<div *ngIf="selectedGunType">
+  <h2>
+    {{selectedGunType.name | uppercase}} was selected
+  </h2>
+  <button (click)="goToDetails()">View Details</button>
+</div>
+
+<h2>Gun Types</h2>
+<ol class="list">
+  <li *ngFor="let gunType of gunTypes" (click)="onSelect(gunType)">
+    {{gunType.name}} -- {{gunType.category}}
+    <span *ngIf="gunType.gunProvider">-- Provider: {{gunType.gunProvider.name}}</span>
+  </li>
+</ol>
+
+<mat-form-field>
+    <mat-label>Search by Type</mat-label>
+    <input matInput (ngModelChange)="filterByType()" placeholder="Category"
+           [(ngModel)]="typeFilter">
+</mat-form-field>

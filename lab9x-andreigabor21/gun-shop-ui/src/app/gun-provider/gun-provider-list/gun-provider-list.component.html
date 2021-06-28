@@ -1,0 +1,29 @@
+<div *ngIf="selectedGunProvider">
+  <h2>
+    {{selectedGunProvider.name | uppercase}} was selected
+  </h2>
+  <button (click)="goToDetails()">View Details</button>
+</div>
+
+<h2>Gun Providers</h2>
+<ol class="list">
+  <li *ngFor="let gunProvider of gunProviders" (click)="onSelect(gunProvider)">
+    {{gunProvider.name}} -- {{gunProvider.speciality}} -- Reputation: {{gunProvider.reputation}}
+  </li>
+</ol>
+
+<mat-form-field appearance="fill">
+  <mat-label>Choose Reputation</mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="None">None</mat-option>
+    <mat-option value="1">Reputation: 1</mat-option>
+    <mat-option value="2">Reputation: 2</mat-option>
+    <mat-option value="3">Reputation: 3</mat-option>
+    <mat-option value="4">Reputation: 4</mat-option>
+    <mat-option value="5">Reputation: 5</mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<button mat-stroked-button (click)="filterByReputation()">Filter</button>
+
+<button mat-raised-button color="accent" (click)="sortByName()">Sort</button>

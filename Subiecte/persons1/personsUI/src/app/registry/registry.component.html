@@ -1,0 +1,15 @@
+<div *ngIf="persons.length == 0">
+
+  <label>Name</label>
+  <input [(ngModel)]="name">
+  <button (click)="search()">Load</button>
+
+  <div *ngIf="empty" >
+    <p>No people found with that name</p>
+  </div>
+
+</div>
+
+<div *ngFor="let person of persons">
+  <{{person.ssn}}> --- <{{person.name}}>
+</div>

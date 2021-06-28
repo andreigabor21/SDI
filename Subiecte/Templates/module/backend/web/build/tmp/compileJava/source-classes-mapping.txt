@@ -1,0 +1,18 @@
+ro/ubb/backend/config/AppLocalConfig.java
+ ro.ubb.backend.config.AppLocalConfig
+ro/ubb/backend/config/WebConfig.java
+ ro.ubb.backend.config.WebConfig
+ ro.ubb.backend.config.WebConfig$1
+ro/ubb/backend/dto/MyDto.java
+ ro.ubb.backend.dto.MyDto
+ ro.ubb.backend.dto.MyDto$MyDtoBuilder
+ro/ubb/backend/converter/Converter.java
+ ro.ubb.backend.converter.Converter
+ro/ubb/backend/dto/BaseDto.java
+ ro.ubb.backend.dto.BaseDto
+ro/ubb/backend/config/Initializer.java
+ ro.ubb.backend.config.Initializer
+ro/ubb/backend/converter/MyConverter.java
+ ro.ubb.backend.converter.MyConverter
+ro/ubb/backend/controller/MyController.java
+ ro.ubb.backend.controller.MyController

@@ -1,0 +1,16 @@
+ro/ubb/springdi/repository/StudentRepositoryImpl.java
+ ro.ubb.springdi.repository.StudentRepositoryImpl
+ro/ubb/springdi/repository/StudentRepository.java
+ ro.ubb.springdi.repository.StudentRepository
+ro/ubb/springdi/service/StudentService.java
+ ro.ubb.springdi.service.StudentService
+ro/ubb/springdi/model/Student.java
+ ro.ubb.springdi.model.Student
+ro/ubb/springdi/ui/Console.java
+ ro.ubb.springdi.ui.Console
+ro/ubb/springdi/config/AppConfig.java
+ ro.ubb.springdi.config.AppConfig
+ro/ubb/springdi/service/StudentServiceImpl.java
+ ro.ubb.springdi.service.StudentServiceImpl
+ro/ubb/springdi/Main.java
+ ro.ubb.springdi.Main

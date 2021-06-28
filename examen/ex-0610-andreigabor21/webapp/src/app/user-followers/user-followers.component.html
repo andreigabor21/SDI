@@ -1,0 +1,11 @@
+<p>user-followers</p>
+
+<div *ngIf="user">
+  User {{user.name}} with followers:
+  <ol>
+    <li *ngFor="let follower of user.followers">
+      {{follower.name}}
+    </li>
+  </ol>
+</div>
+

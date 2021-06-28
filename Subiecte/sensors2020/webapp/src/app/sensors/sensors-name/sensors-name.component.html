@@ -1,0 +1,20 @@
+<h1>Sensor names</h1>
+<ul>
+  <li *ngFor="let name of names">
+    {{name}}
+  </li>
+</ul>
+
+<button (click)="showClicked()">Show</button>
+<ul *ngIf="shown">
+  <li *ngFor="let name of names">
+    <label>Sensor name:</label>
+    {{name}}
+    <button (click)="kill(name)">Stop</button>
+    <ul>
+      <li *ngFor="let sensor of dataForNames.get(name)">
+        {{sensor.id}} -- {{sensor.name}} -- {{sensor.measurement}} -- {{sensor.time}}
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,18 @@
+ro/ubb/jdbctemplate/Main.java
+ ro.ubb.jdbctemplate.Main
+ro/ubb/jdbctemplate/ui/ClientConsole.java
+ ro.ubb.jdbctemplate.ui.ClientConsole
+ro/ubb/jdbctemplate/service/StudentService.java
+ ro.ubb.jdbctemplate.service.StudentService
+ro/ubb/jdbctemplate/model/Student.java
+ ro.ubb.jdbctemplate.model.Student
+ro/ubb/jdbctemplate/repository/StudentRepository.java
+ ro.ubb.jdbctemplate.repository.StudentRepository
+ro/ubb/jdbctemplate/config/JdbcConfig.java
+ ro.ubb.jdbctemplate.config.JdbcConfig
+ro/ubb/jdbctemplate/repository/StudentRepositoryImpl.java
+ ro.ubb.jdbctemplate.repository.StudentRepositoryImpl
+ro/ubb/jdbctemplate/config/AppConfig.java
+ ro.ubb.jdbctemplate.config.AppConfig
+ro/ubb/jdbctemplate/service/StudentServiceImpl.java
+ ro.ubb.jdbctemplate.service.StudentServiceImpl

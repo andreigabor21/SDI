@@ -1,0 +1,10 @@
+ro/ubb/backend/config/JPAConfig.java
+ ro.ubb.backend.config.JPAConfig
+ro/ubb/backend/model/MyClass.java
+ ro.ubb.backend.model.MyClass
+ro/ubb/backend/service/MyService.java
+ ro.ubb.backend.service.MyService
+ro/ubb/backend/model/BaseEntity.java
+ ro.ubb.backend.model.BaseEntity
+ro/ubb/backend/repository/MyRepository.java
+ ro.ubb.backend.repository.MyRepository

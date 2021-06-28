@@ -1,0 +1,22 @@
+Problem state:
+A gun rental business wants an application to help the management team to control the rent of the guns, made by clients.
+
+Entities:
+-Client
+-Gun Type
+-Rental //TO DO 1 more
+
+Data storage:
+- Cached in memory data (1)
+
+Operations:
+1.Add client
+2.Add gun type
+3.Add rental
+4.Print all clients
+5.Print all gun types
+6.Print all rentals
+
+UI:
+- CLI (1)
+

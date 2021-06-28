@@ -1,0 +1,11 @@
+ro/ubb/sensors/service/SensorService.java
+ ro.ubb.sensors.service.SensorService
+ro/ubb/sensors/model/BaseEntity.java
+ ro.ubb.sensors.model.BaseEntity
+ro/ubb/sensors/config/JPAConfig.java
+ ro.ubb.sensors.config.JPAConfig
+ro/ubb/sensors/repository/SensorRepository.java
+ ro.ubb.sensors.repository.SensorRepository
+ro/ubb/sensors/model/Sensor.java
+ ro.ubb.sensors.model.Sensor
+ ro.ubb.sensors.model.Sensor$SensorBuilder

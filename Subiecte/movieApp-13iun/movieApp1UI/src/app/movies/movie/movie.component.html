@@ -1,0 +1,10 @@
+<label>Movie title:</label>
+<input type="text" [(ngModel)]="movieTitle" placeholder="What are you looking for?">
+<button (click)="search()">Search</button>
+
+<h2>Movies</h2>
+<ol>
+  <li *ngFor="let movie of filteredMovies" (click)="goToDetails(movie)">
+    {{movie.title}} -- {{movie.year}}
+  </li>
+</ol>

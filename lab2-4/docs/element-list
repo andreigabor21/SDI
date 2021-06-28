@@ -1,0 +1,7 @@
+gunshop
+gunshop.domain
+gunshop.domain.validators
+gunshop.repository
+gunshop.service
+gunshop.ui
+utils

@@ -1,0 +1,17 @@
+ro/ubb/sensors/model/BaseEntity.java
+ ro.ubb.sensors.model.BaseEntity
+ro/ubb/sensors/config/AppLocalConfig.java
+ ro.ubb.sensors.config.AppLocalConfig
+ro/ubb/sensors/ServerApp.java
+ ro.ubb.sensors.ServerApp
+ro/ubb/sensors/config/JPAConfig.java
+ ro.ubb.sensors.config.JPAConfig
+ro/ubb/sensors/tcp/ClientHandler.java
+ ro.ubb.sensors.tcp.ClientHandler
+ro/ubb/sensors/repository/SensorRepository.java
+ ro.ubb.sensors.repository.SensorRepository
+ro/ubb/sensors/tcp/TcpServer.java
+ ro.ubb.sensors.tcp.TcpServer
+ro/ubb/sensors/model/Sensor.java
+ ro.ubb.sensors.model.Sensor
+ ro.ubb.sensors.model.Sensor$SensorBuilder

@@ -1,0 +1,13 @@
+<h1>Latest votes</h1>
+<ul>
+  <li *ngFor="let vote of votes">
+    {{vote.id}}, {{vote.name}}, {{vote.a}}, {{vote.b}}, {{vote.c}}, {{vote.nr}}
+  </li>
+</ul>
+
+<h1>Vote ranking</h1>
+<ul>
+  <li *ngFor="let result of results">
+    {{result.candidate}}, {{result.votes}}
+  </li>
+</ul>

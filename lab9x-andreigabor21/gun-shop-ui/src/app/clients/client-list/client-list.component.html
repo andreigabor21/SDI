@@ -1,0 +1,25 @@
+<div *ngIf="selectedClient">
+  <h2>
+    {{selectedClient.name | uppercase}} was selected
+  </h2>
+  <button mat-flat-button color="primary" (click)="goToDetails()">View Details</button>
+</div>
+
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let client of clients" (click)="onSelect(client)">
+    {{client.name}} -- {{client.dateOfBirth}}
+    -- Address: {{client.address.city}}, {{client.address.street}}, {{client.address.number}}
+  </mat-list-option>
+</mat-selection-list>
+
+<button mat-button color="primary" (click)="sortByName()">Sort by name</button>
+
+<br> <br>
+<form [formGroup]="findByCityInput" (ngSubmit)="findClientsByCity()">
+  <mat-error *ngIf=noResults>No results</mat-error>
+  <mat-form-field>
+    <mat-label>Find by city</mat-label>
+    <input matInput formControlName="city">
+  </mat-form-field>
+  <button mat-raised-button>Find</button>
+</form>

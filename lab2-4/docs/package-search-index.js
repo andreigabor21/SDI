@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"gunshop"},{"l":"gunshop.domain"},{"l":"gunshop.domain.validators"},{"l":"gunshop.repository"},{"l":"gunshop.service"},{"l":"gunshop.ui"},{"l":"utils"}];updateSearchResults();

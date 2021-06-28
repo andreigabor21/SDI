@@ -1,0 +1,20 @@
+<label>Author:</label>
+<select [(ngModel)]="selectedAuthor" (change)="filterBooks()">
+  <option disabled selected value>select an option</option>
+  <option *ngFor="let author of authors" [ngValue]="author">
+    {{author.name}}
+  </option>
+</select>
+<label>Year:</label>
+<select [(ngModel)]="selectedYear" (change)="filterBooks()">
+  <option disabled selected value>select a year</option>
+  <option *ngFor="let year of years" [ngValue]="year">
+    {{year}}
+  </option>
+</select>
+
+<ul>
+  <li *ngFor="let book of books">
+    {{book.authorDto.ssn}} -- {{book.authorDto.name}} -- {{book.authorDto.contact}} -- {{book.title}} -- {{book.year}}
+  </li>
+</ul>

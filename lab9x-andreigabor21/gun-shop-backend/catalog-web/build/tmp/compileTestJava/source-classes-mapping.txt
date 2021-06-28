@@ -1,0 +1,6 @@
+ro/ubb/catalog/web/controller/GunTypeControllerTest.java
+ ro.ubb.catalog.web.controller.GunTypeControllerTest
+ro/ubb/catalog/web/controller/GunProviderControllerTest.java
+ ro.ubb.catalog.web.controller.GunProviderControllerTest
+ro/ubb/catalog/web/controller/ClientControllerTest.java
+ ro.ubb.catalog.web.controller.ClientControllerTest

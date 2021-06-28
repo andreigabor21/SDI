@@ -1,0 +1,19 @@
+<dataset>
+    <gun_provider id="1" name="gp1" reputation="2" speciality="spec1"/>
+    <gun_provider id="2" name="gp2" reputation="3" speciality="spec2"/>
+    <gun_provider id="3" name="gp3" reputation="4" speciality="spec3"/>
+
+    <gun_type id="1" name="gt1" category="1" gunProvider_id="1"/>
+    <gun_type id="2" name="gt2" category="2" gunProvider_id="2"/>
+    <gun_type id="3" name="gt3" category="2" gunProvider_id="3"/>
+
+    <client id="10" name="client1" city="city1" street="street1" number="20" dateOfBirth="2000-06-06"/>
+    <client id="20" name="client2" city="city2" street="street2" number="30" dateOfBirth="2000-07-07"/>
+    <client id="30" name="client3" city="city3" street="street3" number="40" dateOfBirth="2000-08-08"/>
+
+    <rental client_id="1" guntype_id="1" price="100"/>
+    <rental client_id="2" guntype_id="2" price="200"/>
+    <rental client_id="3" guntype_id="3" price="300"/>
+    <rental client_id="1" guntype_id="2" price="400"/>
+    <rental client_id="2" guntype_id="1" price="500"/>
+</dataset>

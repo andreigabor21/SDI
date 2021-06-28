@@ -1,0 +1,2 @@
+ro/ubb/sensors/Main.java
+ ro.ubb.sensors.Main
