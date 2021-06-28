@@ -1,0 +1,54 @@
+version: '3.3'
+
+services:
+  clients-docker:
+    image: clients-docker
+    build: GunShop-Clients-SB
+    container_name: clients-docker
+    ports:
+      - 8081:8081
+    depends_on:
+      - dbpostgresql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbpostgresql:5432/microservices
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=portocaliu
+      - spring.jpa.generate-ddl=true
+      - spring.jpa.hibernate.ddl-auto=update
+
+  cloudgateway-docker:
+    image: cloudgateway-docker
+    build: Cloud-Gateway
+    container_name: cloudgateway-docker
+    ports:
+      - 8080:8080
+
+  gun-types-docker:
+    image: gun-types-docker
+    build: GunShop-GunTypes-SB
+    container_name: gun-types-docker
+    ports:
+      - 8082:8082
+    depends_on:
+      - dbpostgresql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbpostgresql:5432/microservices
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=portocaliu
+      - spring.jpa.generate-ddl=true
+      - spring.jpa.hibernate.ddl-auto=update
+
+#  gunshop-ui-docker:
+#    build: GunShop-UI
+#    ports:
+#      - 4200:4200
+
+  dbpostgresql:
+    image: postgres:13.2
+    container_name: dbpostgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=portocaliu
+      - POSTGRES_DB=microservices
